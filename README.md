@@ -19,7 +19,7 @@ Or install it yourself as:
 ## Usage
 
 Define a Ruby module, giving it the name of the desired enumeration. Add constants to the module as needed.
-Include `EZEnum` into your module _after_ all constant declarations. E.g.
+Include the `EZEnum` module into your module _after_ your constant declarations. E.g.
 
 ```ruby
 module Status
@@ -41,7 +41,7 @@ Your module will now include an `All` constant, which contains an array of the c
 Status::All # => [New, Processing, Failed, Complete]
 ```
 
-Your will also have the following helper methods add to it:
+It will also have the following helper methods added to it:
 
 * `choices_for_select` - returns an array of the localized names and values for each constant. E.g.
 
@@ -55,8 +55,8 @@ Your will also have the following helper methods add to it:
   Status.display_for(Status::Failed) # => 'Epic Fail'
   ```
 
-To add support for localization, add sections under the respective language code in your locales file, and using the
-downcased name of the module and the downcased name of the constant, provide the corresponding translation. E.g.
+To add support for localization, add sections under the respective language code in your locales file; using the
+lowercase name of the module and the lowercase name of the constant, provide the corresponding translation. E.g.
 
 ```yaml
 en:
