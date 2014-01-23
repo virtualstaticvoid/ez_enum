@@ -1,5 +1,7 @@
 # EZEnum
 
+[![Gem Version](https://badge.fury.io/rb/ez_enum.png)](http://badge.fury.io/rb/ez_enum)
+
 Provides a simple abstraction for defining enumerations in a Ruby module. Supports listing members and localization of constant names.
 
 ## Installation
